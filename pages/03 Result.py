@@ -2,6 +2,10 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
+if 'a' not in st.session_state:
+    st.session_state.a = 0
+    st.switch_page('Welcome.py')
+
 st.header("Result")
 answers = st.session_state.answers_1 + st.session_state.answers_2
 df = pd.DataFrame(answers)

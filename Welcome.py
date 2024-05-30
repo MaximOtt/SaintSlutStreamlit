@@ -12,3 +12,8 @@ st.markdown(
 
 if st.button("Start"):
     st.switch_page("pages/01 Page 1.py")
+
+
+if 'answers_1' not in st.session_state:
+    st.session_state.answers_1 = 0
+    st.session_state.answers_2 = 0
