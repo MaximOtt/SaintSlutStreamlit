@@ -2,8 +2,7 @@ import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 
-if 'a' not in st.session_state:
-    st.session_state.a = 0
+if 'answers_1' not in st.session_state:
     st.switch_page('Welcome.py')
 
 st.header("Result")
@@ -13,8 +12,8 @@ df = pd.DataFrame(answers)
 theory_score = df[df['dimension'] == 'theory']['answer'].mean()
 reality_score = df[df['dimension'] == 'reality']['answer'].mean()
 
-st.write(f"Theory Score: {theory_score}")
-st.write(f"Reality Score: {reality_score}")
+# st.write(f"Theory Score: {theory_score}")
+# st.write(f"Reality Score: {reality_score}")
 
 # Scatter plot
 fig, ax = plt.subplots()
